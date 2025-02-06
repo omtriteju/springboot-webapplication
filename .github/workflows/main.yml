@@ -72,5 +72,6 @@ jobs:
       - name: Deploy Lambda Function
         run: |
           aws lambda update-function-code \
-            --function-name ${{ secrets.LAMBDA_FUNCTION_NAME }} \
+            --function-name "${{ secrets.LAMBDA_FUNCTION_NAME }}" \
             --zip-file fileb://package/springboot-lambda.zip
+
